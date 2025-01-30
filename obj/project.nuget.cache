@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DiKqWlD+AIw=",
+  "dgSpecHash": "LteSC6o1Y+0=",
   "success": true,
-  "projectFilePath": "c:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj",
+  "projectFilePath": "C:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.data.sqlite\\9.0.1\\microsoft.data.sqlite.9.0.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.1\\microsoft.data.sqlite.core.9.0.1.nupkg.sha512",
