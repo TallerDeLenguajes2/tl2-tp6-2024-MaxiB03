@@ -55,3 +55,4 @@ c:\RepoTaller2\tp6\tl2-tp6-2024-MaxiB03\obj\Debug\net8.0\refint\tl2-tp6-2024-Max
 c:\RepoTaller2\tp6\tl2-tp6-2024-MaxiB03\obj\Debug\net8.0\tl2-tp6-2024-MaxiB03.pdb
 c:\RepoTaller2\tp6\tl2-tp6-2024-MaxiB03\obj\Debug\net8.0\tl2-tp6-2024-MaxiB03.genruntimeconfig.cache
 c:\RepoTaller2\tp6\tl2-tp6-2024-MaxiB03\obj\Debug\net8.0\ref\tl2-tp6-2024-MaxiB03.dll
+c:\RepoTaller2\tp6\tl2-tp6-2024-MaxiB03\obj\Debug\net8.0\tl2-tp6-2024-MaxiB03.sourcelink.json

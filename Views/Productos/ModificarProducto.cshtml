@@ -1,0 +1,24 @@
+@model models.Producto
+
+@{
+    ViewData["Title"] = "Modificar Producto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Productos" asp-action="ModificarProducto" asp-route-id="@Model.IdProducto" method="post">
+    <input type="hidden" asp-for="IdProducto" />
+
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <input asp-for="Descripcion" class="form-control" type="text" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio"></label>
+        <input asp-for="Precio" class="form-control" type="number" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <a asp-action="ListarProductos" class="btn btn-secondary">Cancelar</a>
+</form>
