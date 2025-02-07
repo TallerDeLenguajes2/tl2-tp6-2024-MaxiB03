@@ -1,0 +1,32 @@
+@using models
+@model List<models.Presupuestos>
+
+@{
+    ViewData["Title"] = "Listar Presupuestos";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<section class="container">
+    <table class="table table-hover table-striped table-bordered text-center table-info">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre Destinatario</th>
+                <th>Fecha Creación</th>
+                <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model){
+                <tr>
+                    <td>@p.IdPresupuesto</td>
+                    <td>@p.NombreDestinatario</td>
+                    <td>@p.FechaCreacion</td>
+                    <td><a class="btn btn-outline-secondary" asp-controller="Presupuestos" asp-action="Detalle" asp-route-id="@p.IdPresupuesto">Ver</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</section>
