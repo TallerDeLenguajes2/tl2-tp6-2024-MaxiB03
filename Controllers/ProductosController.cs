@@ -73,4 +73,7 @@ public class ProductosController : Controller
         _prodRepository.EliminarProducto(id);
         return RedirectToAction("ListarProductos");
     }
+
+
+    
 }
