@@ -1,0 +1,33 @@
+@model models.Cliente
+
+@{
+    ViewData["Title"] = "Eliminar Cliente";
+}
+
+<h1 class="text-danger">Eliminar Cliente</h1>
+
+<p>¿Estás seguro de que deseas eliminar el siguiente cliente?</p>
+
+<table class="table table-info table-bordered text-center table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Telefono</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.IdCliente</td>
+            <td>@Model.Nombre</td>
+            <td>@Model.Email</td>
+            <td>@Model.Telefono</td>
+        </tr>
+    </tbody>
+</table>
+
+<section class="d-flex flex-column align-items-center">
+    <a class="btn btn-danger col-3" asp-controller="Clientes" asp-action="EliminarCliente" asp-route-id="@Model.IdCliente">Eliminar</a>
+    <a class="btn btn-success col-3 mt-2" asp-controller="Clientes" asp-action="ListarClientes">Cancelar</a>
+</section>

@@ -3,28 +3,28 @@ namespace models;
 public class Presupuestos
 {
     int idPresupuesto;
-    string nombreDestinatario;
+    Cliente cliente;
     string fechaCreacion;
     List<PresupuestosDetalle> detalles;
 
     public int IdPresupuesto { get => idPresupuesto; set => idPresupuesto = value; }
-    public string NombreDestinatario { get => nombreDestinatario; set => nombreDestinatario = value; }
+    public Cliente Cliente { get => cliente; set => cliente = value; }
     public string FechaCreacion { get => fechaCreacion; set => fechaCreacion = value; }
     public List<PresupuestosDetalle> Detalles { get => detalles; set => detalles = value; }
 
     //Constructor
-    public Presupuestos(int idPresupuesto, string nombreDestinatario, string fechaCreacion, List<PresupuestosDetalle> detalles)
+    public Presupuestos(int idPresupuesto, Cliente cliente, string fechaCreacion, List<PresupuestosDetalle> detalles)
     {
         IdPresupuesto=idPresupuesto;
-        NombreDestinatario=nombreDestinatario;
+        this.Cliente=cliente;
         FechaCreacion=fechaCreacion;
         Detalles=detalles;
     }
 
-    public Presupuestos(int idPresupuesto, string nombreDestinatario, string fechaCreacion)
+    public Presupuestos(int idPresupuesto, Cliente cliente, string fechaCreacion)
     {
         IdPresupuesto=idPresupuesto;
-        NombreDestinatario=nombreDestinatario;
+        this.Cliente=cliente;
         FechaCreacion=fechaCreacion;
         Detalles=new List<PresupuestosDetalle>();
     }

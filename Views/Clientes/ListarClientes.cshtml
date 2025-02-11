@@ -1,0 +1,36 @@
+@model List<models.Cliente>
+@{
+    ViewData["Title"] = "Listado Clientes";
+}
+
+<a asp-controller="Clientes" asp-action="Crear" class="btn btn-success mb-3">Crear Cliente</a>
+
+<h1 class="border-bottom my-4">@ViewData["Title"]</h1>
+
+<article class="table-responsive">    
+    <table class="table table-striped table-hover">
+        <thead class="table-dark text-center">
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
+        </thead>
+        <tbody class="text-center">
+            @foreach (models.Cliente cliente in Model) 
+            {
+                <tr>
+                    <td>@cliente.Nombre</td>
+                    <td>@cliente.Email</td>
+                    <td>@cliente.Telefono</td>
+                    <td class="text-center"><a class="nav-link text-dark btn btn-outline-warning" asp-controller="Clientes" asp-action="Modificar" asp-route-id="@cliente.IdCliente">Modificar</a></td>
+                    <td class="text-center"><a class="nav-link text-dark btn btn-outline-warning" asp-controller="Clientes" asp-action="Eliminar" asp-route-id="@cliente.IdCliente">Eliminar</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</article>
+
+<section class="text-end mb-3">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-success">Volver atras</a>
+</section>

@@ -74,6 +74,4 @@ public class ProductosController : Controller
         return RedirectToAction("ListarProductos");
     }
 
-
-    
 }

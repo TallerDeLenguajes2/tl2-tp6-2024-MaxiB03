@@ -1,0 +1,31 @@
+@model models.Presupuestos
+
+@{
+    ViewData["Title"] = "Modificar Presupuesto";
+}
+
+<section>
+    <h1 class="fw-light">@ViewData["Title"]</h1>
+    
+    <form asp-controller="Presupuestos" asp-action="ModificarPresupuesto" method="post"
+        class="bg-light container-fluid">
+        <legend>Presupuesto n° @Model.IdPresupuesto</legend>
+        <section>
+            <input type="hidden" asp-for="IdPresupuesto">
+        </section>
+        <section>
+            <input type="hidden" asp-for="Cliente">
+        </section>
+        <section>
+            <input type="hidden" asp-for="Detalles">
+        </section>
+        <section>
+            <label for="FechaCreacion">Fecha del creacion (YYYY/MM/DD):</label>
+            <input type="text" class="form-control" asp-for="FechaCreacion">
+        </section>
+        <section class="text-center form-group align-items-center">
+            <input type="submit" class="btn btn-warning col-2 m-3" value="Actualizar">
+            <a class="btn btn-success col-2 m-3" asp-area="" asp-controller="Presupuestos" asp-action="ListarPresupuestos">Volver</a>
+        </section> 
+    </form>
+</section>

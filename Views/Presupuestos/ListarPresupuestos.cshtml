@@ -2,8 +2,10 @@
 @model List<models.Presupuestos>
 
 @{
-    ViewData["Title"] = "Listar Presupuestos";
+    ViewData["Title"] = "Listado Presupuestos";
 }
+
+<a class="btn btn-outline-success col-3" asp-area="" asp-controller="Presupuestos" asp-action="Crear">Crear Presupuesto</a>
 
 <h1>@ViewData["Title"]</h1>
 
@@ -11,22 +13,26 @@
     <table class="table table-hover table-striped table-bordered text-center table-info">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Nombre Destinatario</th>
+                <th>Id Presupuesto</th>
                 <th>Fecha Creación</th>
+                <th>Id Cliente</th>
                 <th>Detalle</th>
+                <th>Modificar</th>
+                <th>Agregar Producto</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var p in Model){
+            @foreach (var p in Model)
+            {
                 <tr>
                     <td>@p.IdPresupuesto</td>
-                    <td>@p.NombreDestinatario</td>
                     <td>@p.FechaCreacion</td>
+                    <td>@p.Cliente.IdCliente</td>
                     <td><a class="btn btn-outline-secondary" asp-controller="Presupuestos" asp-action="Detalle" asp-route-id="@p.IdPresupuesto">Ver</a></td>
+                    <td><a class="btn btn-outline-secondary" asp-controller="Presupuestos" asp-action="Modificar" asp-route-id="@p.IdPresupuesto">Modificar</a></td>
+                    <td><a class="btn btn-outline-secondary" asp-controller="Presupuestos" asp-action="Agregar" asp-route-id="@p.IdPresupuesto">Agregar</a></td>
                 </tr>
             }
         </tbody>
     </table>
-
 </section>

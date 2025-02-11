@@ -1,0 +1,31 @@
+@model models.CrearPresupuestoViewModel
+@using models;
+
+@{
+    ViewData["Title"] = "Nuevo Presupuesto";
+    DateTime fecha = DateTime.Now;
+    string fechaActual = fecha.ToString("yyyy-MM-dd");
+}
+
+
+<section class="container">
+    <h1 class="fw-light">@ViewData["Title"] (@fechaActual)</h1>
+
+    <form asp-controller="Presupuestos" asp-action="CrearPresupuesto" method="post" class="bg-light">
+        <section>
+            <label for="IdCliente">Seleccione el cliente:</label>
+            <select asp-for="IdCliente" asp-items="@(Model.Clientes != null ? new SelectList(Model.Clientes, "IdCliente", "Nombre") : new SelectList(new List<Cliente>()))" class="form-control">
+            <option value="">Seleccione un cliente</option>
+            </select>
+            <span asp-validation-for="@Model.IdCliente" class="text-danger"></span>
+        </section>
+        
+        <section class="m-3 d-flex flex-column align-items-center">
+            <input type="submit" class="btn btn-success col-3" value="Crear">
+            <a class="btn btn-danger col-3 m-2" asp-controller="Presupuestos" asp-action="ListarPresupuestos">Volver</a>
+        </section>
+    </form>
+</section>
+
+
+@section Scripts{<partial name="_ValidationScriptsPartial"/>}

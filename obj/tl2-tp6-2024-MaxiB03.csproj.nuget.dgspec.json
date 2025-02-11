@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj": {}
+    "c:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj": {}
   },
   "projects": {
-    "C:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj": {
+    "c:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj",
+        "projectUniqueName": "c:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj",
         "projectName": "tl2-tp6-2024-MaxiB03",
-        "projectPath": "C:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj",
+        "projectPath": "c:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\tl2-tp6-2024-MaxiB03.csproj",
         "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-        "outputPath": "C:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\obj\\",
+        "outputPath": "c:\\RepoTaller2\\tp6\\tl2-tp6-2024-MaxiB03\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,0 +1,29 @@
+@model models.AgregarProductoAPresupuesto
+
+@{
+    ViewData["Title"] = "Agregar Producto a Presupuesto";
+    int idPres = ViewBag.IdPresupuesto;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-controller="Presupuestos" asp-action="AgregarProducto" asp-route-id="@idPres" method="post">
+  
+    <div class="mb-3">
+        <label for="IdProducto" class="form-label">Producto</label>
+        <select class="form-select" name="IdProducto" required>
+            <option value="">Seleccione un producto</option>
+            @foreach (var producto in Model.Productos)
+            {
+                <option value="@producto.IdProducto">@producto.Descripcion - @producto.Precio</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="Cantidad" class="form-label">Cantidad</label>
+        <input type="number" class="form-control" name="Cantidad" value="@Model.Cantidad" min="1" required />
+    </div>
+
+    <button type="submit" class="btn btn-success">Agregar</button>
+</form>

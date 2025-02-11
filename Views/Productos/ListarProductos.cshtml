@@ -1,12 +1,12 @@
 @model List<models.Producto>
 
 @{
-    ViewData["Titulo"] = "Lista de Productos";
+    ViewData["Titulo"] = "Listado Productos";
 }
 
-<h1>@ViewData["Titulo"]</h1>
-
 <a asp-controller="Productos" asp-action="CrearProducto" class="btn btn-success mb-3">Crear Producto</a>
+
+<h1>@ViewData["Titulo"]</h1>
 
 <table class="table table-striped">
     <thead>
