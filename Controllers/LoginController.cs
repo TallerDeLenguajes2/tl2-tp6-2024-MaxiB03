@@ -18,6 +18,12 @@ public class LoginController : Controller
         {
             IsAuthenticated = HttpContext.Session.GetString("IsAuthenticated") == "true"
         };
+
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+        {
+            ViewBag.ErrorMessage = "La sesión ha expirado. Por favor, inicie sesión nuevamente.";
+        }
+        
         return View(model);
     }
 
@@ -46,6 +52,8 @@ public class LoginController : Controller
                 return RedirectToAction("Index", "Home");
             }
 
+            // Logueo de intento fallido
+            _logger.LogWarning($"Intento de acceso inválido - Usuario: {model.Username} Clave ingresada: {model.Password}");
             model.ErrorMessage = "Credenciales Inválidas";
             model.IsAuthenticated = false;
 
